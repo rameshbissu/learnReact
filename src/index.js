@@ -25,12 +25,7 @@ const Book = () => {
   );
 };
 
-const Image = () => (
-  <img
-    src="https://m.media-amazon.com/images/I/91bYsX41DVL._SY342_.jpg"
-    alt="Atomic Habits"
-  />
-);
+const Image = () => <img src="./images/book.jpg" alt="Atomic Habits" />;
 const Title = () => <h2>Atomic Habits</h2>;
 const Author = () => {
   return <h4>James Clear</h4>;
