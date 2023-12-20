@@ -8,11 +8,13 @@ const books = [
     author: "James Clear",
     title: "Atomic Habits",
     img: "./images/book.jpg",
+    id: 1,
   },
   {
     author: "Raghuram Rajan",
     title: "Breaking the Mould : Reimagining India's Economic Future",
     img: "https://m.media-amazon.com/images/I/71DEKXIsW8L._SY342_.jpg",
+    id: 2,
   },
 ];
 
@@ -20,8 +22,8 @@ const BookList = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { img, title, author } = book;
-        return <Book img={img} title={title} author={author} />;
+        const { img, title, author, id } = book;
+        return <Book img={img} title={title} author={author} key={id} />;
       })}
     </section>
   );
