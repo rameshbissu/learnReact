@@ -3,25 +3,25 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
+const author = "James Clear";
+const title = "Atomic Habits";
+const img = "./images/book.jpg";
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book author={author} title={title} img={img} />
+      <Book author={author} title={title} img={img} />
     </section>
   );
 };
-const author = "James Clear";
-const Book = () => {
-  const title = "Atomic Habits";
+const Book = (props) => {
+  console.log(props);
   return (
     <article className="book">
-      <img src="./images/book.jpg" alt="Atomic Habits" />
-      <h2>{title}</h2>
-      <h4>{author}</h4>
+      <img src={props.img} alt={props.title} />
+      <h2>{props.title}</h2>
+      <h4>{props.author}</h4>
     </article>
   );
 };
