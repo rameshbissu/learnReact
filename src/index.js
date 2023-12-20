@@ -3,15 +3,30 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-const author = "James Clear";
-const title = "Atomic Habits";
-const img = "./images/book.jpg";
+const firstBook = {
+  author: "James Clear",
+  title: "Atomic Habits",
+  img: "./images/book.jpg",
+};
+const SecondBook = {
+  author: "Raghuram Rajan",
+  title: "Breaking the Mould : Reimagining India's Economic Future",
+  img: "https://m.media-amazon.com/images/I/71DEKXIsW8L._SY342_.jpg",
+};
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+      <Book
+        author={SecondBook.author}
+        title={SecondBook.title}
+        img={SecondBook.img}
+      />
     </section>
   );
 };
