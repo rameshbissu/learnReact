@@ -15,13 +15,16 @@ const books = [
     img: "https://m.media-amazon.com/images/I/71DEKXIsW8L._SY342_.jpg",
   },
 ];
-const names = ["john", "peter", "susan"];
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
-console.log(newNames);
+
 const BookList = () => {
-  return <section className="booklist">{newNames}</section>;
+  return (
+    <section className="booklist">
+      {books.map((book) => {
+        const { img, title, author } = book;
+        return <Book img={img} title={title} author={author} />;
+      })}
+    </section>
+  );
 };
 const Book = ({ img, title, author }) => {
   // console.log(props);
