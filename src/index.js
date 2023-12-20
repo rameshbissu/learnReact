@@ -46,7 +46,7 @@ const EventExample = () => {
   };
   return (
     <section>
-      <form onSubmit={handleFormSubmission}>
+      <form>
         <h2>Typical Form</h2>
         <input
           type="text"
@@ -54,10 +54,15 @@ const EventExample = () => {
           onChange={handleFormInput}
           style={{ margin: "1rem 0" }}
         />
+        <button type="submit" onClick={handleFormSubmission}>
+          submit
+        </button>
+        <div>
+          <button onClick={handleButtonClick} style={{ padding: "5px 10px" }}>
+            click me
+          </button>
+        </div>
       </form>
-      <button onClick={handleButtonClick} style={{ padding: "5px 10px" }}>
-        click me
-      </button>
     </section>
   );
 };
